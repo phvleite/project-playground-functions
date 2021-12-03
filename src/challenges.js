@@ -82,9 +82,9 @@ function fizzBuzz(valores) {
     } else if (valores[valor] % 3 === 0) {
       resultado.push("fizz");
     } else if (valores[valor] % 5 === 0) {
-      resultado.push("Buzz");
+      resultado.push("buzz");
     } else {
-      resultado.push("Bug!");
+      resultado.push("bug!");
     }
   }
   return resultado;
