@@ -1,11 +1,8 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
   // seu código aqui
-  if (valor1 === true && valor2 === true) {
-    return true;
-  } else {
-    return false;
-  }
+return  valor1 && valor2 ? true : false;
+
 }
 
 // Desafio 2
@@ -79,7 +76,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(valores) {
   // seu código aqui
   let resultado = [];
-  for (let valor in valores){
+  for (let valor in valores) {
     if (valores[valor] % 3 === 0 && valores[valor] % 5 === 0) {
       resultado.push("fizzBuzz");
     } else if (valores[valor] % 3 === 0) {
