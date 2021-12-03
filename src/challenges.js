@@ -44,8 +44,7 @@ function highestCount(valores) {
       cont += 1;
     }
   }
-  //return cont;
-  return `o maior valor é ${maior} e ele repete ${cont} vez(es)`;
+  return cont;
 }
 
 console.log(highestCount([0, 0, 0]))
