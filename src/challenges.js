@@ -31,7 +31,6 @@ function concatName(textoArray) {
 function footballPoints(wins, ties) {
   // seu código aqui
   return (wins * 3) + ties;
-
 }
 
 // Desafio 6
@@ -49,7 +48,6 @@ function highestCount(valores) {
       cont += 1;
     }
   }
-
   return cont;
 }
 
@@ -75,7 +73,6 @@ function catAndMouse(mouse, cat1, cat2) {
   } else {
     return "os gatos trombam e o rato foge";
   }
-
 }
 
 // Desafio 8
