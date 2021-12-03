@@ -2,7 +2,6 @@
 function compareTrue(valor1, valor2) {
   // seu código aqui
 return  valor1 && valor2 ? true : false;
-
 }
 
 // Desafio 2
@@ -91,11 +90,23 @@ function fizzBuzz(valores) {
 }
 
 // Desafio 9
-function encode() {
+function encode(enigma) {
   // seu código aqui
+  let codigo = enigma.replace(/a/g,'1');
+  codigo = codigo.replace(/e/g,'2');
+  codigo = codigo.replace(/i/g,'3');
+  codigo = codigo.replace(/o/g,'4');
+  codigo = codigo.replace(/u/g,'5');
+  return codigo;
 }
-function decode() {
+function decode(enigma) {
   // seu código aqui
+  let codigo = enigma.replace(/1/g,'a');
+  codigo = codigo.replace(/2/g,'e');
+  codigo = codigo.replace(/3/g,'i');
+  codigo = codigo.replace(/4/g,'o');
+  codigo = codigo.replace(/5/g,'u');
+  return codigo;
 }
 
 module.exports = {
