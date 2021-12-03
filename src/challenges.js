@@ -32,7 +32,7 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(valores) {
   // seu código aqui
-  let maior = 0;
+  let maior = valores[0];
   let cont = 0;
   for (let valor in valores) {
     if (valores[valor] > maior) {
@@ -44,8 +44,11 @@ function highestCount(valores) {
       cont += 1;
     }
   }
-  return cont;
+  //return cont;
+  return `o maior valor é ${maior} e ele repete ${cont} vez(es)`;
 }
+
+console.log(highestCount([0, 0, 0]))
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
