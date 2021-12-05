@@ -4,13 +4,15 @@ function techList(tecArray, name) {
   if (!tecArray || !name){
     return 'Vazio!'
   } else {
-    listaDesejosTec = [];
+    let listaDesejosTec = [];
     for (let tec of tecArray){
       listaDesejosTec.push({'tech': tec, 'name': name});
     }
-    listaDesejosTec.sort(function(a,b){
-      return a.tech < b.tech ? -1 : a.tech > b.tech ? 1 : 0;
-    })
+    if (listaDesejosTec.length === 5) {
+      listaDesejosTec.sort(function(a,b){
+        return a.tech < b.tech ? -1 : a.tech > b.tech ? 1 : 0;
+      })
+    };
     return listaDesejosTec;
   }
 }
