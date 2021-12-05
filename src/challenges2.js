@@ -1,14 +1,18 @@
 // Desafio 10
 function techList(tecArray, name) {
   // seu código aqui
-  let tecObjList = {
-    tech: "",
-    name: "",
+  if (!tecArray){
+    return 'Vazio!'
+  } else {
+    listaDesejosTec = [];
+    for (let tec of tecArray){
+      listaDesejosTec.push({'tech': tec, 'name': name});
+    }
+    listaDesejosTec.sort(function(a,b){
+      return a.tech < b.tech ? -1 : a.tech > b.tech ? 1 : 0;
+    })
+    return listaDesejosTec;
   }
-  for(let i in tecArray){
-
-  }
-
 }
 
 // Desafio 11
