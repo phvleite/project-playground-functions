@@ -1,7 +1,7 @@
 // Desafio 10
 function techList(tecArray, name) {
   // seu código aqui
-  if (!tecArray){
+  if (!tecArray || !name){
     return 'Vazio!'
   } else {
     listaDesejosTec = [];
