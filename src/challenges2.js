@@ -20,8 +20,6 @@ function techList(tecArray, name) {
   }
 }
 
-console.log(techList([], 'Paulo'));
-
 // Desafio 11
 function generatePhoneNumber(numeros) {
   // seu código aqui
