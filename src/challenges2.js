@@ -36,13 +36,6 @@ function generatePhoneNumber(numeros) {
   if (numeroTelefone.some(elem => elem > 9)){
     return 'não é possível gerar um número de telefone com esses valores';
   }
-/*   for (let nT = 0; nT < numeroTelefone.length - 2; nT += 1){
-    if (numeroTelefone[nT] === numeroTelefone[nT + 1] && numeroTelefone[nT] === numeroTelefone[nT + 2]){
-      return 'não é possível gerar um número de telefone com esses valores';
-    } else {
-      return `(${numeroTelefone[0]}${numeroTelefone[1]}) ${numeroTelefone[2]}${numeroTelefone[3]}${numeroTelefone[4]}${numeroTelefone[5]}${numeroTelefone[6]}-${numeroTelefone[7]}${numeroTelefone[8]}${numeroTelefone[9]}${numeroTelefone[10]}`;
-    }
-  } */
   for (let i = 0; i < numeroTelefone.length; i += 1){
     let cont = 0;
     for (let j = 0; j < numeroTelefone.length; j += 1){
