@@ -57,8 +57,6 @@ function generatePhoneNumber(numeros) {
   return `(${numeroTelefone[0]}${numeroTelefone[1]}) ${numeroTelefone[2]}${numeroTelefone[3]}${numeroTelefone[4]}${numeroTelefone[5]}${numeroTelefone[6]}-${numeroTelefone[7]}${numeroTelefone[8]}${numeroTelefone[9]}${numeroTelefone[10]}`;
 }
 
-console.log(generatePhoneNumber([8, 2, 9, 8, 7, 0, 1, 2, 1, 1, 6]))
-
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
