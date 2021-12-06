@@ -8,6 +8,9 @@ function techList(tecArray, name) {
     for (let tec of tecArray){
       listaDesejosTec.push({'tech': tec, 'name': name});
     }
+    if (listaDesejosTec.length === 0){
+      return 'Vazio!';
+    }
     if (listaDesejosTec.length === 5) {
       listaDesejosTec.sort(function(a,b){
         return a.tech < b.tech ? -1 : a.tech > b.tech ? 1 : 0;
@@ -16,6 +19,8 @@ function techList(tecArray, name) {
     return listaDesejosTec;
   }
 }
+
+console.log(techList([], 'Paulo'));
 
 // Desafio 11
 function generatePhoneNumber(numeros) {
