@@ -62,14 +62,23 @@ function triangleCheck(a, b, c) {
   // seu código aqui
   if ((a < b + c && b < a + c && c < a + b) && ( a > Math.abs(b - c) && b > Math.abs(a - c) && c > Math.abs(a - b))){
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(pedido) {
   // seu código aqui
+
+  let recebido = pedido.match(/\d+/g).map(Number);
+  let soma = 0
+  for (let i of recebido){
+    soma += i;
+  } 
+  if (soma > 1) {
+    return `${soma} copos de água`;
+  }
+  return `${soma} copo de água`;
 }
 
 module.exports = {
