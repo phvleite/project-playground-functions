@@ -1,3 +1,4 @@
+/*
 // Desafio 1
 function compareTrue(valor1, valor2) {
   // seu código aqui
@@ -110,6 +111,92 @@ function decode(enigma) {
   codigo = codigo.replace(/5/g,'u');
   return codigo;
 }
+
+module.exports = {
+  calcArea,
+  catAndMouse,
+  compareTrue,
+  concatName,
+  decode,
+  encode,
+  fizzBuzz,
+  footballPoints,
+  highestCount,
+  splitSentence,
+};
+*/
+
+// Desafio 1
+const compareTrue = (valor1, valor2) => (valor1 && valor2);
+
+// Desafio 2
+const calcArea = (base, altura) => (base * altura) / 2;
+
+// Desafio 3
+const splitSentence = (sentence) => sentence.split(' ');
+
+// Desafio 4
+const concatName = (array) => `${array[array.length - 1]}, ${array[0]}`;
+
+// Desafio 5
+const footballPoints = (wins, ties) => (wins * 3) + ties;
+
+// Desafio 6
+const highestCount = (array) => {
+  let highest = array[0];
+  let count = 0;
+  for (let num of array) {
+    if (num === highest) {
+      count += 1;
+    } else if (num > highest) {
+      highest = num;
+      count = 1;
+    }
+  }
+  return count;
+};
+
+// Desafio 7
+const catAndMouse = (mouse, cat1, cat2) => {
+  const distanceCat1 = Math.abs(mouse - cat1);
+  const distanceCat2 = Math.abs(mouse - cat2);
+  const message = 'os gatos trombam e o rato foge';
+  if (distanceCat1 === distanceCat2) return message;
+  if (distanceCat1 < distanceCat2) return 'cat1';
+  return 'cat2';
+};
+
+catAndMouse(0, 3, 2);
+
+// Desafio 8
+const fizzBuzz = (array) => {
+  const result = array.map((num) => {
+    if (num % 3 === 0 && num % 5 === 0) return 'fizzBuzz';
+    if (num % 3 === 0) return 'fizz';
+    if (num % 5 === 0) return 'buzz';
+    return 'bug!';
+  });
+  return result;
+};
+
+// Desafio 9
+const encode = (word) => {
+  const ENIGMA = { a: 1, e: 2, i: 3, o: 4, u: 5 };
+  let code = word;
+  for (let char of Object.keys(ENIGMA)) {
+    code = code.replaceAll(char, ENIGMA[char]);
+  }
+  return code;
+};
+
+const decode = (code) => {
+  const ENIGMA = { a: 1, e: 2, i: 3, o: 4, u: 5 };
+  let word = code;
+  for (let num of Object.values(ENIGMA)) {
+    word = word.replaceAll(num, Object.keys(ENIGMA)[num - 1]);
+  }
+  return word;
+};
 
 module.exports = {
   calcArea,
